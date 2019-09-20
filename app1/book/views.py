@@ -13,7 +13,7 @@ def index(request):
     
 def book(request, book_id):
     try:
-        books = Book.objects.get(id=book_id)
+        book = Book.objects.get(id=book_id)
     except Book.DoesNotExist:
         raise Http404("Book does not exist")
-    return render(request, 'book_detail.html', {'books': books})
+    return render(request, 'book_detail.html', {'book': book})
