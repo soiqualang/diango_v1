@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'api1',
+    'book',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +85,7 @@ WSGI_APPLICATION = 'app1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'vietnam',
+        'NAME': 'diango_v1',
         'USER': 'postgres',
         'PASSWORD': 'your-pass',
         'HOST': '127.0.0.1',
