@@ -8,11 +8,11 @@ from .models import Category, Book
 # Register your models here.
 
 class CategoryModelAdmin(admin.ModelAdmin):
-    #list_filter = ('active',)
     list_display = ['name']
 
 class BookModelAdmin(admin.ModelAdmin):
     #readonly_fields = ('image_tag',)
+    list_filter = ['category']
     list_display = ['name', 'price', 'category', 'author_name']
 
 admin.site.register(Category, CategoryModelAdmin)
