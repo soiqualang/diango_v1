@@ -9,4 +9,4 @@
 # Hay sử dụng kiểu folder/** để có hiệu lực cho tất cả các file bên trong thư mục.
 
 *__pycache__*
-settings.py
+*settings.py*
