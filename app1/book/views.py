@@ -7,15 +7,16 @@ from .models import Category, Book
 
 # Create your views here.
 def index(request):
-    type_objs = Type.objects.filter(active__exact=True)
-    context = {
-        'type_objs': type_objs,
+    #category_objs = Type.objects.filter(active__exact=True)
+    category_objs = Category.objects
+    category = {
+        'category_objs': category_objs,
     }
-    return render(request, "cats.html", context)
+    return render(request, "cats.html", category)
     
-def product(request, product_id):
+def book(request, book_id):
     try:
-        product = Product.objects.get(id=product_id)
-    except Product.DoesNotExist:
-        raise Http404("Product does not exist")
-    return render(request, 'book_detail.html', {'product': product})
+        book = Book.objects.get(id=book_id)
+    except Book.DoesNotExist:
+        raise Http404("Book does not exist")
+    return render(request, 'book_detail.html', {'book': book})
