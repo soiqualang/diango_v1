@@ -2,7 +2,7 @@
 <html lang="vi">
     <head>
         <meta charset="UTF-8">
-        <title>Ecom</title>
+        <title>book</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -16,7 +16,7 @@
         <nav class="navbar navbar-default navbar-expand-sm" style="background-color: #212121;">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="/">Django Ecom</a>
+              <a class="navbar-brand" href="/">Django book</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-items">
             <ul class="nav navbar-nav">   
@@ -40,19 +40,17 @@
         <div class="col-sm-8">
             <div class="row">
                 <div class="col-xs-6">
-                    <a href="{% url 'product' product.id %}"><img src="/media/{{ product.image }}" /></a>
+                    <a href="{% url 'book' book.id %}">aahahahahaha</a>
                 </div>
                 <div class="col-xs-3">
-                    <b>Product Name</b><br/>
+                    <b>Book Name</b><br/>
                     <b>Price</b><br/>
-                    <b>Quantity</b><br/>
-                    <b>Description</b><br/>
+                    <b>Author</b><br/>
                 </div>
                 <div class="col-xs-3">
-                    {{product.name}}<br/>
-                    ${{product.price}}<br/>
-                    {{product.quantity}}<br/>
-                    {{product.description}}<br/>
+                    {{book.name}}<br/>
+                    ${{book.price}}<br/>
+                    {{book.author_name}}<br/>
                 </div>
             </div>
         </div>

@@ -23,6 +23,7 @@ from book import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
     #url(r'^$', views.index, name='index'),
+    path('', views.index),
+    url(r'^book/(?P<book_id>[0-9]+)/$', views.book, name='book'),
 ]

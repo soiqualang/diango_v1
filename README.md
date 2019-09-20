@@ -134,3 +134,18 @@ dtlong
 
 http://localhost:8000/admin/
 
+## loop all in view
+```html
+{% for cat in categorys %}
+    {{ cat.name }}
+{% endfor %}
+```
+
+in view
+
+```python
+def index(request):
+    #category_objs = Type.objects.filter(active__exact=True)
+    categorys = Category.objects.all()
+    return render(request, "cats.html", {'categorys': categorys})
+```
