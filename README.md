@@ -150,6 +150,15 @@ def index(request):
     return render(request, "cats.html", {'categorys': categorys})
 ```
 
+# Rest API
+
+## Install
+
+`djangorestframework`
+
+
+
+
 
 ## Preferece
 
