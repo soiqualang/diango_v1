@@ -75,9 +75,40 @@ Available subcommands:
 
 https://viblo.asia/p/python-co-ban-voi-django-framework-Ljy5VxGkZra
 
+https://minhng.info/tutorials/hoc-django-trong-1-ngay.html
+
 `python manage.py startapp book`
 
+**Add app to setting**
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'api1',
+    'book',
+]
+```
+
 **Make model**
+```python
+class Category(models.Model):
+   name = models.CharField(max_length=200)
+   def __str__(self):
+     return self.name
+
+#Book model có field name, price, category, author_name
+class Book(models.Model):
+   name = models.CharField(max_length=200)
+   price = models.IntegerField(default=0)
+   category = models.ForeignKey(Category, on_delete=models.CASCADE)
+   author_name = models.CharField(max_length=200)
+   def __str__(self):
+     return self.name
+```
 
 **Migrate**
 
@@ -91,6 +122,15 @@ https://viblo.asia/p/python-co-ban-voi-django-framework-Ljy5VxGkZra
 **Đẩy model vào DB**
 > Mỗi `class` tương ứng là một `table`, mỗi `object` là một `record`
 
+> Cái này gọi là ORM (Object-relational mapping)
+
 `python manage.py migrate`
 
+**Tạo user**
+
+`python manage.py createsuperuser`
+dtlong
+dtlong
+
+http://localhost:8000/admin/
 
