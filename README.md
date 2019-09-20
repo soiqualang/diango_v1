@@ -149,3 +149,10 @@ def index(request):
     categorys = Category.objects.all()
     return render(request, "cats.html", {'categorys': categorys})
 ```
+
+
+## Preferece
+
+https://medium.com/swlh/searching-in-django-rest-framework-45aad62e7782
+
+https://medium.com/the-andela-way/creating-a-django-api-using-django-rest-framework-apiview-b365dca53c1d
