@@ -71,5 +71,26 @@ Available subcommands:
 ## Start a sub app/service
 `python manage.py startapp api1`
 
+***
+
+https://viblo.asia/p/python-co-ban-voi-django-framework-Ljy5VxGkZra
+
+`python manage.py startapp book`
+
+**Make model**
+
+**Migrate**
+
+`python manage.py makemigrations book`
+
+> Lưu trong thư mục migrations
+
+**Check sql được tạo chính xác chưa**
+`python manage.py sqlmigrate book 0001`
+
+**Đẩy model vào DB**
+> Mỗi `class` tương ứng là một `table`, mỗi `object` là một `record`
+
+`python manage.py migrate`
 
 
