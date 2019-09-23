@@ -150,6 +150,15 @@ def index(request):
     return render(request, "cats.html", {'categorys': categorys})
 ```
 
+# Deploy to host
+
+/opt/lampp/htdocs/rdesk/data/User/admin/home/python/django/diango_v1/project/diango_v1/app1/app1/
+
+* Make `python manage.py migrate`
+* `python manage.py runserver 107.173.145.184:9090`
+
+> http://rose.dothanhlong.org:9090/
+
 # Rest API
 
 ## Install
